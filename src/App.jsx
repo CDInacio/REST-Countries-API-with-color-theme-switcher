@@ -18,8 +18,8 @@ function App() {
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => response.json())
       .then((data) => {
-        setLoading(false);
         setCountries(data);
+        setLoading(false);
       });
   }, []);
 

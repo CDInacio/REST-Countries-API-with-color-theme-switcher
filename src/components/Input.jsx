@@ -16,7 +16,7 @@ export default function Input({ onChooseContinent, onQuery }) {
           className="text-white dark:text-dark-grey absolute top-0 bottom-0 left-5 my-auto"
         />
       </div>
-      <div className="mt-10 lg:mt-0 ">
+      <div className="mt-10 2xl:mt-0 ">
         <select
           onChange={(e) => onChooseContinent(e.target.value)}
           className="cursor-pointer hover:bg-very-dark-blue1 py-3 px-4 bg-dark-blue dark:bg-white dark:hover:bg-very-light-grey duration-300 dark:text-very-dark-blue2 shadow-md rounded-sm"
