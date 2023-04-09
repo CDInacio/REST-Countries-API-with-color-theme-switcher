@@ -33,17 +33,34 @@ function App() {
 
   function handleSearch(countries) {
     return countries.filter((item) => {
-      if (item.region == continent) {
-        return params.some((param) =>
-          item[param]?.toString().toLowerCase().includes(query.toLowerCase())
-        );
-      } else if (continent == "All") {
-        return params.some((param) =>
-          item[param]?.toString().toLowerCase().includes(query.toLowerCase())
-        );
+      if (item.region === continent) {
+        return item?.name.common
+          .toString()
+          .toLowerCase()
+          .includes(query.toLowerCase());
+      } else if (continent === "All") {
+        return item?.name.common
+          .toString()
+          .toLowerCase()
+          .includes(query.toLowerCase());
       }
     });
   }
+
+  // // get xountry by capital and name
+  // function handleSearch(countries) {
+  //   return countries.filter((item) => {
+  //     if (item.region === continent) {
+  //       return params.some((param) =>
+  //         item[param]?.toString().toLowerCase().includes(query.toLowerCase())
+  //       );
+  //     } else if (continent === "All") {
+  //       return params.some((param) =>
+  //         item[param]?.toString().toLowerCase().includes(query.toLowerCase())
+  //       );
+  //     }
+  //   });
+  // }
 
   return (
     <div className="container px-6 mx-auto pb-10">
